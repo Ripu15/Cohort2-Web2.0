@@ -1,6 +1,3 @@
-mark down editor online 
-stackedit.io
-//## means heading
 ## Todo App
 This project contains following features:
 -Anyone can create a todo
