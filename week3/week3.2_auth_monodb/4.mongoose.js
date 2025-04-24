@@ -8,7 +8,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 //connecting to mongoDB DataBase
-mongoose.connect('mongodb+srv://ripudamansinghprepare:b8iSFIUiRqU6nIun@cluster0.cevpew1.mongodb.net/');
+mongoose.connect('connecting string/');
 
 //Creating structure for table named 'User'
 const User = mongoose.model("User", {

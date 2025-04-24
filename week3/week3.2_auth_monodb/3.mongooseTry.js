@@ -4,7 +4,7 @@
 const mongoose = require('mongoose');
 
 //connecting with mongoDB data-base using mongoose string generated during DB creation 
-mongoose.connect('mongodb+srv://ripudamansinghprepare:b8iSFIUiRqU6nIun@cluster0.cevpew1.mongodb.net/');
+mongoose.connect('connecting string/');
 
 
                 
