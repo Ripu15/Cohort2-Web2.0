@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- DOM document always returns string -->
+        <input id = "firstnumber" type = "text" placeholder = "First Number"></input><br>
+        <input id = "secondnumber" type = "text" placeholder = "Second Number"></input><br>
+        <button onclick="populateDiv()">Caluculate SUM</button>
+        <div id ="Final Sum"></div>
+    </body>
+    <script>
+        function populateDiv(){
+            const a = document.getElementById("firstnumber").value;
+            const b = document.getElementById("secondnumber").value;
+            const element=document.getElementById("Final Sum");
+            // in JS by default its string 
+            // so, converting it to int
+            element.innerHTML = parseInt(a)+parseInt(b);
+
+        }
+    </script>
+</html>  

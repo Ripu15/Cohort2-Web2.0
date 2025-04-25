@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>ELEMENT node can have TEXT node </h1>
+    </head>
+    <body>
+        <title id = "demo">DOM Tutorial</title>
+    </body>
+    <script>
+        myTitle1 = document.getElementById("demo").innerHTML;
+        myTitle2 = document.getElementById("demo").firstChild.nodeValue;
+        myTitle3 = document.getElementById("demo").childNodes[0].nodeValue;
+    </script>
+</html>

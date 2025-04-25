@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Javascript  HTML DOM </h2>
+<p>Finding HTML elements using<b> document.forms</b>.</p>
+
+<form id ="LoginForm" action ="/action_page.php">
+    First name:<input type = "text" name = "fname"
+    value="Donald"><br>
+    Last name:<input type = "text" name = "lname"
+    value="Duck"><br>
+    <input type = "submit"> value= "Submit"
+</form>
+
+<p>These are the values of eachelements in the form.</p>
+
+<p id="demo"></p>
+
+<script>
+const x = document.forms["LoginForm"];
+let text = "";
+for(let i=0;i< x.length;i++)
+    text = text + x.elements[i].value + "<br>";
+document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+</html>

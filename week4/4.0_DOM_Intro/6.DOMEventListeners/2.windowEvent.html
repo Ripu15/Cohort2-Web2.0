@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JS addEventListener()</h1>
+        <p>This program uses addEventListener() on window object</p>
+        <p id ="demo">Try it</p>
+
+        <script>
+            window.addEventListener("resize",function (){
+                document.getElementById("demo").innerHTML =  Math.random();
+            });
+        </script>
+    </body>
+</html>

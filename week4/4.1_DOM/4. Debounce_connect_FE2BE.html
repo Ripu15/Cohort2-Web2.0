@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <!-- On input func is called , so, request goes out -->
+         <!-- if more digits we put to input boxes, more request goes out -->
+
+        <input oninput = "debouncePopulateDiv()" id = "firstnumber" type = "text" placeholder = "First Number"></input><br>
+        <input oninput = "debouncePopulateDiv()" id = "secondnumber" type = "text" placeholder = "Second Number"></input><br>
+
+     
+        <div id ="Final Sum"></div>
+    </body>
+    <script>
+        // request goes out for every digit entered
+        //need to wait for some time and then send request to the server
+        //Debouncing is a technique to limit how often a 
+        //function is called. It waits for a pause in user 
+        // activity before actually running the function.
+
+        let timeout;
+        //it will delay call to func 'populateDiv'
+        function debouncePopulateDiv(){
+            clearTimeout(timeout);
+            timeout = setTimeout(function(){
+                populateDiv();
+            },500); 
+        }
+        function populateDiv(){
+            const a = document.getElementById("firstnumber").value;
+            const b = document.getElementById("secondnumber").value;
+            // By  default method is GET
+            fetch("https://sum-server.100xdevs.com/sum?a=" +a + "&b=" +b)
+            .then(function(response){
+                console.log(response);
+                response.text()
+                    .then(function(ans){
+                        console.log(ans);
+                    })
+            })
+
+        }
+    </script>
+</html>

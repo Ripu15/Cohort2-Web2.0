@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input id = "firstnumber" type = "text" placeholder = "First Number"></input><br>
+        <input id = "secondnumber" type = "text" placeholder = "Second Number"></input><br>
+        <button onclick="populateDiv()">Caluculate SUM</button>
+        <div id ="Final Sum"></div>
+    </body>
+    <script>
+        //  function populateDiv(){
+        //     const a = document.getElementById("firstnumber").value;
+        //     const b = document.getElementById("secondnumber").value;           // element.innerHTML = parseInt(a)+parseInt(b);
+
+            //https://api.mathjs.org/v4/?expr=1%2B2
+
+            //network call,so, its async call
+            //res is promise
+            //.then means when res is resolved that func body will run
+        //    const res = fetch("https://sum-server.100xdevs.com/sum?a=" +a + "&b=" +b)
+        //     .then(function(response){
+        //         console.log(response);
+        //         //.theh  waits for the text() promise to resolve
+        //         response.text()
+        //             .then(function(ans){
+        //                 console.log(ans);
+        //                 document.getElementById("Final Sum").innerHTML = ans;
+        //             })
+        //     })
+
+            //OR async await syntax
+     async function populateDiv(){
+            const a = document.getElementById("firstnumber").value;
+            const b = document.getElementById("secondnumber").value;  
+            const res1 = await fetch("https://sum-server.100xdevs.com/sum?a=" +a + "&b=" +b);
+            const ans1 = await response.text();
+            document.getElementById("finalSum").innerHTML = ans1;
+
+
+        }
+    </script>
+</html>

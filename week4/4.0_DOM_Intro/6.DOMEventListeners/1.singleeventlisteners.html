@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JS addEventListener()</h1>
+        <p>This program uses addEventListener() to execute function when user clicks on a button</p>
+        <button id ="myBtn">Try it</button>
+
+        <script>
+            //addEventListener(event, handler-func)
+            document.getElementById("myBtn").addEventListener("click",myFunction);
+            function myFunction(){
+                alert("Hello World !!! ");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JS HTML Events</h1>
+        <h2>The onmouse[] Attributes</h2>
+
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color:#094a38;width:120px;height:20px;padding:40px;">
+        Mouse Over me
+        </div>
+
+        <script>
+            function mOver(obj){
+                obj.innerHTML = "Thank you"
+            }
+            function mOut(obj){
+                obj.innerHTML = "Mouse Over Me"
+            }
+        </script>
+
+    </body>
+</html>

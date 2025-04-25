@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JS addEventListener()</h1>
+        <p>This program uses addEventListener() to add 2 events to same button</p>
+        <button id ="myBtn">Try it</button>
+
+        <script>
+            //addEventListener(event, handler-func)
+            var x = document.getElementById("myBtn");
+            x.addEventListener("click",myFunction);
+           x.addEventListener("click",someOtherFunction);
+
+            function myFunction(){
+                alert("Hello World !!! ");
+            }
+
+            function someOtherFunction(){
+                alert("Hello from second function !!! ");
+            }
+        </script>
+    </body>
+</html>
