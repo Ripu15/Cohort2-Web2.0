@@ -1,0 +1,23 @@
+# node version or with name, its a base image
+
+#FROM to EXPOSE runs when u create an image
+FROM node:20
+
+#working directory
+WORKDIR /app
+# copy everything from current folder to working dir
+COPY . .
+
+# commands to learn
+# below commands Bootstrap or build the application
+RUN npm install
+RUN npx prisma generate
+RUN npm run build
+
+# application to run on port
+EXPOSE 3000
+
+# It runs when you run the container
+
+# When u runs the application
+CMD ["node", "dist/index.js"]
