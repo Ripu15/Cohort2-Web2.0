@@ -1,0 +1,3 @@
+# files that are NOT required to get copied 
+node_modules
+dist
