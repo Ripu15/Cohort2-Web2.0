@@ -1,0 +1,49 @@
+Lets start KT:
+
+******************************* what are microservices *****************************************************
+
+Microservices is an architectural style that structures an application as a collection of small, independent, and loosely coupled services, each responsible for a specific business function.
+
+🧱 Key Characteristics:
+Single Responsibility: Each microservice focuses on one function (e.g., user authentication, payment processing).
+
+Independently Deployable: Services can be built, tested, deployed, and scaled independently.
+
+Language & Tech Agnostic: Different services can use different programming languages or databases.
+
+Own Data Storage: Each service manages its own database to avoid tight coupling.
+
+Communicate via APIs: Typically use lightweight protocols like HTTP/REST, gRPC, or message queues.
+
+📦 Microservices vs Monolith:
+Feature	Monolithic             Architecture	                          Microservices Architecture
+Codebase	               Single codebase	                          Multiple codebases (per service)
+Deployment	               Deploy whole app at once	                  Deploy services independently
+Scaling	Scale entire app       Scale individual services		  Scale individual services
+Team Structure	               One team for all features	          Multiple teams for different services
+Fault Tolerance	               One failure can bring down all	          Failures isolated to one service
+
+🧑‍💻 Example:
+A food delivery app might have:
+
+Auth Service – Handles login and registration
+Restaurant Service – Manages restaurant data
+Order Service – Processes orders
+Payment Service – Handles payments
+Notification Service – Sends email/SMS updates
+
+Each can be developed and deployed independently.
+
+✅ Benefits:
+Faster development and deployment
+Better scalability
+Easier to adopt new technologies
+Improved fault isolation
+
+⚠️ Challenges:
+Complexity in communication
+Distributed data management
+Requires strong DevOps and monitoring
+Harder debugging across services
+
+
